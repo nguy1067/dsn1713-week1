@@ -97,6 +97,10 @@ header nav ul a {
   justify-content: center;
 }
 
+section {
+  margin: 4em 0;
+}
+
 /* Donut Card Styling */
 
 .product-container {
@@ -107,13 +111,14 @@ header nav ul a {
 
 .donut-card {
   border-radius: 14px;
+  color: white;
+  padding: 2em, 1.25em;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.wrapper, .product-container {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-}
 
 .donut-card:nth-child(1) {
   background-color: #F54F95;
@@ -131,21 +136,52 @@ header nav ul a {
   background-color: rgb(181, 207, 181);
 }
 
-.donut-card {
-    border-radius: 20px;
-    color: white;
-    padding: 20px 10px 40px;
-    text-align: center;
+.product-container p{
+  margin: .5em 0;
 }
 
-.card, .button {
+.product-container p.price{
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+
+.product-card, .button {
   background-color: white;
-  border-radius: 30px;
+  font-size: 1.125rem;
   color: #F54F95;
-  display: block;
+  display: inline-block;
   font-weight: bold;
   margin: 50px auto 0;
-  padding: 15px 20px;
-  text-decoration: none;
+  border-radius: 20px;
   width: fit-content;
+  cursor: pointer;
+  border: none
 }
+
+  .product-card button:hover,
+  .product-card button:focus {
+    background-color: #F54F95;
+
+  }
+
+  .foot-container {
+    background-color: #F54F95;
+    padding: .5em 0;
+    text-align: center;
+    color: white;
+  }
+
+  @media (min-width: 600px){
+
+    .donut-card {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 1000px) {
+      .donut-card{
+        grid-template-columns: 1fr 1fr 1fr fr;
+      }
+    }
+  }
